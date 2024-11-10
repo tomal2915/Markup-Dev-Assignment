@@ -10,9 +10,8 @@ This is a responsive website built using **HTML5**, **CSS3**, and **Tailwind CSS
 3. [Installation Instructions](#installation-instructions)
 4. [Deployment](#deployment)
 6. [Performance & SEO](#performance-seo)
-7. [Contributing](#contributing)
-8. [License](#license)
 
+   
 ## Technology Stack
 - **HTML5** & **CSS3** for structuring and styling the website.
 - **Tailwind CSS** for utility-first styling.
