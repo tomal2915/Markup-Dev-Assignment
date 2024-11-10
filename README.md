@@ -8,8 +8,7 @@ This is a responsive website built using **HTML5**, **CSS3**, and **Tailwind CSS
 1. [Technology Stack](#technology-stack)
 2. [Features](#features)
 3. [Installation Instructions](#installation-instructions)
-4. [Usage](#usage)
-5. [Deployment](#deployment)
+4. [Deployment](#deployment)
 6. [Performance & SEO](#performance-seo)
 7. [Contributing](#contributing)
 8. [License](#license)
@@ -31,5 +30,26 @@ This is a responsive website built using **HTML5**, **CSS3**, and **Tailwind CSS
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/your-repository-name.git
-   cd your-repository-name
+   git clone https://github.com/tomal2915/Markup-Dev-Assignment.git
+   cd Markup-Dev-Assignment
+
+## Deployment
+
+- Vercel
+- Live Link: https://markup-dev-assignment-j162-ftpps2tkj-tomal-s-projects.vercel.app
+
+## Performance & SEO
+
+- Google PageSpeed Insights:
+
+  For mobile:
+- Performance- 40
+- Accessibility- 96
+- Best Practices- 96
+- SEO= 92
+
+  For mobile:
+- Performance- 76
+- Accessibility- 96
+- Best Practices- 96
+- SEO= 92
