@@ -1,47 +1,24 @@
-// gulpfile.js
 const gulp = require('gulp');
 const postcss = require('gulp-postcss');
-const cssnano = require('gulp-cssnano');
-const browserSync = require('browser-sync').create();
 const tailwindcss = require('tailwindcss');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano'); // for minifying CSS
 
-// Paths for files
+// Define paths
 const paths = {
   css: {
-    src: 'src/tailwind.css',  // Source Tailwind CSS file
-    dest: 'dist/css'                  // Output folder for processed CSS
-  },
-  html: {
-    src: 'src/**/*.html'              // Source HTML files
+    src: 'src/tailwind.css', // Source Tailwind file
+    dest: 'dist/css' // Destination folder for built CSS
   }
 };
 
-// Tailwind CSS build task
+// CSS task to build Tailwind CSS
 function buildCSS() {
-  return gulp.src(paths.css.src)
-    .pipe(postcss([tailwindcss, require('autoprefixer')]))  // Process with Tailwind and Autoprefixer
-    .pipe(cssnano())                                         // Minify CSS
-    .pipe(gulp.dest(paths.css.dest))                         // Output CSS file
-    .pipe(browserSync.stream());                             // Inject CSS changes without page reload
+  return gulp
+    .src(paths.css.src)
+    .pipe(postcss([tailwindcss, autoprefixer, cssnano]))
+    .pipe(gulp.dest(paths.css.dest));
 }
 
-// HTML reload task
-function reloadHTML() {
-  return gulp.src(paths.html.src)
-    .pipe(browserSync.stream());
-}
-
-// Watch for changes and reload
-function watchFiles() {
-  browserSync.init({
-    server: {
-      baseDir: './src'  // Serve files from the 'src' directory
-    }
-  });
-  gulp.watch('tailwind.config.js', buildCSS);      // Rebuild CSS on Tailwind config change
-  gulp.watch(paths.css.src, buildCSS);             // Rebuild CSS on Tailwind CSS file change
-  gulp.watch(paths.html.src, reloadHTML);          // Reload on HTML file change
-}
-
-// Define default Gulp task
-exports.default = gulp.series(buildCSS, watchFiles);
+// Define a build task
+gulp.task('build', buildCSS);
