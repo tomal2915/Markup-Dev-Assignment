@@ -35,7 +35,7 @@ This is a responsive website built using **HTML5**, **CSS3**, and **Tailwind CSS
 ## Deployment
 
 - Vercel
-- Live Link: https://markup-dev-assignment-j162-ftpps2tkj-tomal-s-projects.vercel.app
+- Live Link: https://markup-dev-assignment-j162.vercel.app/
 
 ## Performance & SEO
 
